@@ -1,0 +1,80 @@
+name: ai_mechanic
+description: AI Mechanic Platform - Intelligent vehicle diagnostics powered by Amazon Nova
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # HTTP client for Amazon Nova / AWS Bedrock API calls
+  http: ^1.2.0
+
+  # Bluetooth Classic (ELM327 OBD2 dongles)
+  flutter_bluetooth_serial: ^0.4.0
+
+  # Bluetooth Low Energy (BLE OBD2 dongles)
+  flutter_blue_plus: ^1.31.15
+
+  # Local JSON storage for health records
+  shared_preferences: ^2.2.2
+
+  # Better local file storage for scan history
+  path_provider: ^2.1.2
+
+  # JSON serialization
+  dart_mappable: ^4.2.0
+
+  # Animations
+  flutter_animate: ^4.5.0
+
+  # Icons pack (more car/mechanic icons)
+  cupertino_icons: ^1.0.6
+  permission_handler: ^11.3.0
+
+  # GPS location for AI context (local labor rates, driver-side orientation)
+  geolocator: ^13.0.1
+  geocoding: ^3.0.0
+
+  crypto: any
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/app_icon.png"
+  min_sdk_android: 21
+  adaptive_icon_background: "#050D1A"
+  adaptive_icon_foreground: "assets/icon/app_icon.png"
+
+flutter:
+  uses-material-design: true
+
+  # ── FONTS ──────────────────────────────
+  # Download Exo 2 from fonts.google.com
+  # Place the .ttf files in assets/fonts/
+  fonts:
+    - family: Exo2
+      fonts:
+        - asset: assets/fonts/Exo2-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Exo2-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Exo2-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Exo2-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Exo2-ExtraBold.ttf
+          weight: 800
+
+  # ── ASSETS ─────────────────────────────
+  assets:
+    - assets/fonts/
+    - assets/images/
